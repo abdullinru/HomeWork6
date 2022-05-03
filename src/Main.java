@@ -5,7 +5,7 @@ public class Main {
         int []arr = generateRandomArray();
         //System.out.println(Arrays.toString(arr));
         int sum=0;
-        int min = 200_000;
+        int min = 2_000_000_000;
         int max = 0;
         for (int i = 0; i < arr.length; i++) {
             sum+=arr[i];
