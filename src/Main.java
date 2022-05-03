@@ -1,13 +1,25 @@
+import java.sql.SQLOutput;
 import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int []arr = generateRandomArray();
         //System.out.println(Arrays.toString(arr));
         int sum=0;
+        int min = 200_000;
+        int max = 0;
         for (int i = 0; i < arr.length; i++) {
             sum+=arr[i];
+            if (arr[i]>max){
+                max = arr[i];
+            }
+            if (arr[i]< min){
+                min = arr[i];
+            }
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
+        System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
+
     }
     int[] arr = generateRandomArray();
 
