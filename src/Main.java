@@ -2,6 +2,22 @@ import java.sql.SQLOutput;
 import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
+        task4();
+
+    }
+    public static void task4(){
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        //char[] kopiya = reverseFullName.clone();
+        for (int i = 0; i < reverseFullName.length/2+1; i++) {
+            char bukva = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length-1-i];
+            reverseFullName[reverseFullName.length-1-i] = bukva;
+            //reverseFullName[i]=kopiya[kopiya.length-1-i];
+        }
+        String str = Arrays.toString(reverseFullName);
+        System.out.println(str);
+    }
+    public static void task1_3(){
         int []arr = generateRandomArray();
         //System.out.println(Arrays.toString(arr));
         int sum=0;
@@ -21,7 +37,6 @@ public class Main {
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
         System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
         System.out.println("Средняя сумма трат за день составила " + srSum + " рублей");
-
 
     }
     int[] arr = generateRandomArray();
