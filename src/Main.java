@@ -16,9 +16,12 @@ public class Main {
                 min = arr[i];
             }
         }
+        double srSum = sum/(30*1.0);
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
         System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
+        System.out.println("Средняя сумма трат за день составила " + srSum + " рублей");
+
 
     }
     int[] arr = generateRandomArray();
